@@ -1,0 +1,10 @@
+Package: forhytm
+Title: A dynamic water balance model for numerical experiments
+Version: 0.1.0
+Authors@R: person("Matthias", "Speich", email = "matthias.speich@wsl.ch", role = c("aut", "cre"))
+Description: FORHYTM is a point-based water balance model, created for the purpose of testing parameter sensitivity. The model takes hourly meteorological data as input (precipitation, air temperature, relative humidity, global radiation, wind speed, as well as daily relative sunshine duration), and returns daily values of water fluxes (potential transpiration, actual transpiration, soil evaporation, interception evaporation, water yield) and storage (canopy storage, soil moisture, snowpack).
+Depends: R (>= 3.3.3)
+License: GNU General Public License v3 (GPL-3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
