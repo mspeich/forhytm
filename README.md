@@ -5,11 +5,17 @@ This repository contains the source code of the toy model FORHYTM, as described 
 
 # Package installation
 
-TODO
+The easiest way to install this package is a direct installation from Github, which can be done by executing the following code in R:
 
-# Source code
+```R
+install.packages("devtools")
+library(devtools)
+install_github("mspeich/forhytm")
+library(forhytm)
+```
+This way, all functions and the sample data are loaded directly into the R workspace.
 
-The R code files can be downloaded from the folder "R".
+Alternatively, the source code files may be downloaded from the folder ```R```. The sample data may be downloaded from the folder ```data``` and read into an R session using the function ```load```.
 
 # Sample data
 
@@ -27,8 +33,18 @@ Daily data:
 
 If you wish to use the Erlenbach data for your own research, please see: http://www.wsl.ch/fe/gebirgshydrologie/testgebiet_alptal/data/index_EN
 
-
 This is not the same dataset that was used in the paper, as this data may not be shared publicly. However, it is available from the Swiss Federal Office of Meteorology and Climatology MeteoSwiss: http://www.meteoswiss.admin.ch/home/services-and-publications/advice-and-service/datenportal-fuer-lehre-und-forschung.html
+
+For a quick-and-dirty variation of climatic conditions, the meteorological variables may be modified. For example, temperature may be increased by a given offset ```deltaT``` by entering:
+
+```R
+erl.temp$t <- erl.temp$t+deltaT
+```
+
+Precipitation may be scaled by a given factor ```fPrec``` by typing:
+```R
+erl.prec$p <- erl.prec$p+fPrec
+```
 
 # Running the model
 Once the package is installed and loaded, the model may be run with all parameters set to a standard value with the following line:
